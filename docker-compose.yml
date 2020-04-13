@@ -50,8 +50,23 @@ services:
       - elasticsearch
       - filebeat
 
+  ## Just here to generate log files..
+  nginx-demo:
+    image: nginx:latest
+    ports:
+      # Running at localhost:8080
+      - "8080:80"
+    volumes:
+      # Mount log streams for filebeat
+      - ./nginx/var/log/nginx:/var/log/nginx
+    depends_on:
+      - elasticsearch
+      - filebeat
+      - logstash
+
 volumes:
   elasticsearch:
   kibana:
   filebeat:
   logstash:
+  nginx-demo:

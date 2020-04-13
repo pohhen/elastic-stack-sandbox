@@ -18,6 +18,8 @@ All Elastic-stack images can be found from Elastic.co
 ### Log sources
 - sampleLogFiles
   - files to read by Filebeat
+- Nginx-demo
+  - automatically sends access.log from localhost:8080 to Elasticsearch
 
 ## Usage
 ```bash
@@ -25,7 +27,6 @@ docker-compose up -d
 ```
 
 ### Coming soon
-- log source from Nginx-container
 - log source from NodeJS-container
 - Heartbeat
 - Elastic APM (application performance monitoring)

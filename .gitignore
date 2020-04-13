@@ -5,11 +5,13 @@
 !elasticsearch
 !elasticsearch/*
 !filebeat
-!filebeat/*
+!filebeat/**
 !kibana
 !kibana/*
 !logstash
 !logstash/*
+!nginx
+!nginx/**
 !sampleLogFiles
 !sampleLogFiles/*
 !docker-compose.yml
