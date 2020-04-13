@@ -1,6 +1,8 @@
 # elastic-stack-sandbox
 Sandbox environment for Elasticsearch 7 and extensions like Kibana, beats and other monitorings.
 
+[![Build Status](https://cloud.drone.io/api/badges/pohhen/elastic-stack-sandbox/status.svg)](https://cloud.drone.io/pohhen/elastic-stack-sandbox)
+
 All Elastic-stack images can be found from Elastic.co
 - https://www.docker.elastic.co/
 
