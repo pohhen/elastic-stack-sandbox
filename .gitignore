@@ -1,0 +1,15 @@
+# By default ignore
+*
+!.gitignore
+!README.md
+!elasticsearch
+!elasticsearch/*
+!filebeat
+!filebeat/*
+!kibana
+!kibana/*
+!logstash
+!logstash/*
+!sampleLogFiles
+!sampleLogFiles/*
+!docker-compose.yml

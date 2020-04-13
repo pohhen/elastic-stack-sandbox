@@ -1,0 +1,33 @@
+filebeat.config:
+  modules:
+    path: ./modules.d/*.yml
+    reload.enabled: false
+
+# If you want test your own log samples
+# Enable JSON and/or TEXT type parsing
+# Add you log file to 'sampleLogFiles' folder in project root
+
+## Read JSON-type logs
+filebeat.inputs:
+  - type: log
+    enabled: true
+    json.keys_under_root: true
+    paths:
+      - "/var/log/sample/sample*-json.log"
+
+## Read sample log folder mounted with text-type logs
+  - type: log
+    enabled: true
+    paths:
+      - "/var/log/sample/sample*-text.log"
+
+#--------------------------- Elasticsearch output -----------------------------
+# output.elasticsearch:
+#   hosts: '${ELASTICSEARCH_HOSTS:elasticsearch:9200}'
+#   username: '${ELASTICSEARCH_USERNAME:}'
+#   password: '${ELASTICSEARCH_PASSWORD:}'
+
+#----------------------------- Logstash output --------------------------------
+# Using Logstash output for this exercise just to get to know it.
+output.logstash:
+  hosts: '${LOGSTASH_HOSTS:logstash:5044}'
