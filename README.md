@@ -1,5 +1,5 @@
 # elastic-stack-sandbox
-Sandbox environment for Elasticserach 7 and extensions
+Sandbox environment for Elasticsearch 7 and extensions like Kibana, beats and other monitorings.
 
 All Elastic-stack images can be found from Elastic.co
 - https://www.docker.elastic.co/
