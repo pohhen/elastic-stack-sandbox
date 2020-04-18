@@ -1,6 +1,7 @@
 # By default ignore
 *
 !.gitignore
+!.drone.yml
 !README.md
 !apmServer
 !apmServer/*
