@@ -5,10 +5,5 @@ name: nodejs-demo
 steps:
 - name: build
   build :
-    image: nodejs-demo
-    context: nodejs-demo/
-    dockerfile: nodejs-demo/Dockerfile
-- name: test
-  image: nodejs-demo
-  commands:
-  - npm test
+    context: ./nodejs-demo
+    dockerfile: Dockerfile
