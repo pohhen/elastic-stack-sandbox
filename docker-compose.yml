@@ -50,6 +50,15 @@ services:
       - elasticsearch
       - filebeat
 
+  apmserver:
+    image: docker.elastic.co/apm/apm-server:7.6.2
+    environment: 
+      - output.elasticsearch.hosts=["elasticsearch:9200"]
+    volumes:
+      - ./apmServer/apm-server.yml:/usr/share/apm-server/apm-server.yml
+    depends_on:
+      - elasticsearch
+
   ## Just here to generate log files..
   nginx-demo:
     image: nginx:latest
@@ -63,6 +72,18 @@ services:
       - elasticsearch
       - filebeat
       - logstash
+
+  ## Just hero to generate APM-log
+  nodejs-demo: 
+    build:
+      context: ./nodejs
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - elasticsearch
+      - kibana
+      - apmserver
 
 volumes:
   elasticsearch:

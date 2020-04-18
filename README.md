@@ -16,19 +16,25 @@ All Elastic-stack images can be found from Elastic.co
   - forwards logs to Logstash
 - Logstash
   - forwards logs to Elasticsearch
+- APM-server
+  - Cathers application perfomance data from NodeJS-demo
 
 ### Log sources
 - sampleLogFiles
   - files to read by Filebeat
 - Nginx-demo
   - automatically sends access.log from localhost:8080 to Elasticsearch
+- NodeJS-demo
+  - automatically sends application performance data from localhost:3000 to Elasticsearch
 
 ## Usage
 ```bash
-docker-compose up -d
+docker-compose up -d --build
+```
+```bash
+# Just the AMP demo
+docker-compose up -d --build nodejs-demo
 ```
 
 ### Coming soon
-- log source from NodeJS-container
 - Heartbeat
-- Elastic APM (application performance monitoring)

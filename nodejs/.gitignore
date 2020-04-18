@@ -1,0 +1,7 @@
+*
+!.dockerignore
+!.gitignore
+!app.js
+!Dockerfile
+!favicon*
+!package*.json

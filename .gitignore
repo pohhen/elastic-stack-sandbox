@@ -2,6 +2,8 @@
 *
 !.gitignore
 !README.md
+!apmServer
+!apmServer/*
 !elasticsearch
 !elasticsearch/*
 !filebeat
@@ -11,7 +13,9 @@
 !logstash
 !logstash/*
 !nginx
-!nginx/**
+!nginx/**/README.md
+!nodejs
+!nodejs/*
 !sampleLogFiles
 !sampleLogFiles/*
 !docker-compose.yml
